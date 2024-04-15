@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuppon</title>
+
+    <!-- FONT AWESON ICON -->
+    <script
+      src="https://kit.fontawesome.com/d5b48fda4e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--EXTERNAL STYLE -->
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+
+    <!-- STYLE WITH BOOSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+<!-- se trabajara en este mini-proyecto considerando que no se usaran estilos en css, sino tratando de solo usar los estilos predeterminado que trae boostrap -->
+  <body>
+    <nav class="navbar navbar-dark bg-success p-2 mb-3">
+      <div class="container-fluid">
+        <img
+          src="./Assets/img/logo-white.png"
+          alt="logo-cuppon"
+          width="85"
+          height="25"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Dark offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECCION DE CARTAS-->
+    <!-- se realizo una sola carta que sirvio de estructura hacia las demas, una vez terminadas solo se copio la informacion solicitada dentro de ellas -->
+    <main class="row my-4 mx-2 bg-main">
+      <!-- CARD 1 -->
+      <section class="col-12 col-md-4 mb-5">
+        <div class="card h-100 d-flex flex-column">
+          <img src="./Assets/img/cupon-1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title fw-normal">
+              Plumón Coral Fleece estampado en modelo y tamaño a elección
+            </h5>
+            <!-- se coloco un mb-0, fue la alternativa que encontre para que se pegaran mas los dos parrafos -->
+            <p class="card-text text-body-tertiary mb-0">Plumones Manolino</p>
+            <p class="card-text text-body-tertiary mb-1 small">
+              <i class="fa-solid fa-location-dot"></i> 9191 Avenida Vitacura,
+              Chile
+            </p>
+          </div>
+          <hr class="w-75 m-auto" />
+          <div class="d-flex justify-content-end align-items-center p-2">
+            <!-- coloque margin 0 porque fue la alternativa encontrada para evitar que los precios se colocaran uno mas arriba que otro -->
+            <p class="card-text p-1 text-body-tertiary m-0">$45.990</p>
+            <p class="card-text p-1 text-success fs-5 fw-bolder m-0">$22.990</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 2 -->
+      <section class="col-12 col-md-4 mb-5">
+        <div class="card h-100 d-flex flex-column">
+          <img src="./Assets/img/cupon-2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title fw-normal">
+              Entrada para compartir + platos de fondo + postres + bebestibles
+            </h5>
+            <p class="card-text text-body-tertiary mb-0">V for Vegan</p>
+            <p class="card-text text-body-tertiary mb-1 small">
+              <i class="fa-solid fa-location-dot"></i> 777 Jesse Pinkman, Chile
+            </p>
+          </div>
+          <hr class="w-75 m-auto" />
+          <div class="d-flex justify-content-end align-items-center p-2">
+            <p class="card-text p-1 text-body-tertiary m-0">$30.990</p>
+            <p class="card-text p-1 text-success fs-5 fw-bolder m-0">$12.990</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 3 -->
+      <section class="col-12 col-md-4 mb-5">
+        <div class="card h-100 d-flex flex-column">
+          <img src="./Assets/img/cupon-3.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title fw-normal">
+              Evaluación integral + blanqueamiento dental led + limpieza +
+              fluoración
+            </h5>
+            <p class="card-text text-body-tertiary mb-0">
+              Clínica Dental Quijada
+            </p>
+            <p class="card-text text-body-tertiary mb-1 small">
+              <i class="fa-solid fa-location-dot"></i> 1342, Blanco Encalada,
+              Chile
+            </p>
+          </div>
+          <hr class="w-75 m-auto" />
+          <div class="d-flex justify-content-end align-items-center p-2">
+            <p class="card-text p-1 text-body-tertiary m-0">$300.000</p>
+            <p class="card-text p-1 text-success fs-5 fw-bolder m-0">$25.990</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 4 -->
+      <section class="col-12 col-md-4 mb-5">
+        <div class="card h-100 d-flex flex-column">
+          <img src="./Assets/img/cupon-4.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title fw-normal">
+              Colación para 2 personas + postre (no incluye bebidas)
+            </h5>
+            <p class="card-text text-body-tertiary mb-0">Suricata almacen</p>
+            <p class="card-text text-body-tertiary mb-1 small">
+              <i class="fa-solid fa-location-dot"></i>
+              9191 Avenida Vitacura, Chile
+            </p>
+          </div>
+          <hr class="w-75 m-auto" />
+
+          <div class="d-flex justify-content-end align-items-center p-2">
+            <p class="card-text p-1 text-body-tertiary m-0">$4.200</p>
+            <p class="card-text p-1 text-success fs-5 fw-bolder m-0">$2.100</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 5 -->
+      <section class="col-12 col-md-4 mb-5">
+        <div class="card h-100 d-flex flex-column">
+          <img src="./Assets/img/cupon-5.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title fw-normal">
+              1, 2 o 4 tickets para Stukids. Elige sucursal
+            </h5>
+            <p class="card-text text-body-tertiary mb-0">
+              Stukids Centro de Eventos
+            </p>
+            <p class="card-text text-body-tertiary mb-1 small">
+              <i class="fa-solid fa-location-dot"></i>
+              133 El tranque, Chile
+            </p>
+          </div>
+          <hr class="w-75 m-auto" />
+
+          <div class="d-flex justify-content-end align-items-center p-2">
+            <p class="card-text p-1 text-body-tertiary m-0">$4.000</p>
+            <p class="card-text p-1 text-success fs-5 fw-bolder m-0">$2.500</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 6 -->
+      <section class="col-12 col-md-4 mb-5">
+        <div class="card h-100 d-flex flex-column">
+          <img src="./Assets/img/cupon-6.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title fw-normal">
+              San Pedro de Atacama : 1 o 2 noches en alojamiento a elección
+            </h5>
+            <p class="card-text text-body-tertiary mb-0">D-Latam Travel</p>
+          </div>
+          <hr class="w-75 m-auto" />
+
+          <div class="d-flex justify-content-end align-items-center p-2">
+            <p class="card-text p-1 text-body-tertiary m-0">$80.200</p>
+            <p class="card-text p-1 text-success fs-5 fw-bolder m-0">$44.100</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- TERMINO DE SECCION DE CARTAS -->
+    <!-- section del menu de informacion -->
+    <section class="menu-informacion bg-success text-white p-3">
+      <h2 class="fs-4 text-center mb-3">Recibe cupones en tu correo</h2>
+      <div class="mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Nombre"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Correo Electrónico"
+        />
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-light fw-bold px-4 py-2">
+          Enviar
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer text-center text-secondary">
+      <div
+        class="container p-3 d-flex flex-column align-items-center custon-img"
+      >
+      <!-- tuve vaios problemas a la hora de desarrollar el gooter debido a los tamaños personalizados de boostrap, por lo que tome la desicion de aplicarle estilos en la carpeta css -->
+        <img
+          src="./Assets/img/logo-black.png "
+          alt="logo-color-negro"
+          class="img-fluid"
+        />
+        <span class="footer-text"
+          >© 2018 Cuppon Latam. Todos los derechos reservados.</span
+        >
+      </div>
+    </footer>
+    <!-- TERMINO DE FOOTER -->
+  </body>
+</html>
